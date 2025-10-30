@@ -15,17 +15,17 @@ from models import Animal, Keeper, Enclosure, Species, Diet
 # Views go here!
 # Animal endpoints
 def serialize_animal(animal):
-    """Return animal as a dictionary"""
     return {
         'id': animal.id,
         'name': animal.name,
         'gender': animal.gender,
         'year_of_arrival': animal.year_of_arrival,
-        'species': animal.species.species_type,
-        'diet': animal.diet.diet_type,
-        'keeper': animal.keeper.name,
-        'enclosure': animal.enclosure.enclosure_type
+        'species': animal.species.species_type if animal.species else None,
+        'diet': animal.diet.diet_type if animal.diet else None,
+        'keeper': animal.keeper.name if animal.keeper else None,
+        'enclosure': animal.enclosure.enclosure_type if animal.enclosure else None
     }
+
  
 # Routes
 @app.route('/')
