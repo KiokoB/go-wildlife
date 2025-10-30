@@ -6,15 +6,20 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f0fdf4;
   margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f0fdf4;
 }
 
+h1,
 h2 {
   color: #065f46;
 }
 
-table {
-  border-collapse: collapse;
+a {
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.8;
 }

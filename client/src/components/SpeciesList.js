@@ -14,7 +14,7 @@ function SpeciesList() {
         <div>
             <h2>🐅 Species</h2>
             <table border="1" cellPadding="8" style={{ width: "100%", marginTop: "15px" }}>
-                <thead style={{ backgroundColor: "#fecaca" }}>
+                <thead style={{ backgroundColor: "#f8f1d0ff" }}>
                     <tr>
                         <th>ID</th>
                         <th>Type</th>

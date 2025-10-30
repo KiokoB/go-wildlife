@@ -3,22 +3,31 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
     const navStyle = {
+        backgroundColor: "#065f46",
         padding: "15px",
-        backgroundColor: "#2f855a",
-        color: "white",
         display: "flex",
-        justifyContent: "space-around",
+        justifyContent: "center",
+        gap: "30px",
+    };
+
+    const linkStyle = {
+        color: "white",
+        textDecoration: "none",
+        fontWeight: "bold",
+        fontSize: "16px",
     };
 
     return (
         <nav style={navStyle}>
-            <Link to="/" style={{ color: "white" }}>Animals</Link>
-            <Link to="/keepers" style={{ color: "white" }}>Keepers</Link>
-            <Link to="/species" style={{ color: "white" }}>Species</Link>
-            <Link to="/diets" style={{ color: "white" }}>Diets</Link>
-            <Link to="/enclosures" style={{ color: "white" }}>Enclosures</Link>
+            <Link to="/" style={linkStyle}>Home</Link>
+            <Link to="/animals" style={linkStyle}>Animals</Link>
+            <Link to="/keepers" style={linkStyle}>Keepers</Link>
+            <Link to="/species" style={linkStyle}>Species</Link>
+            <Link to="/diets" style={linkStyle}>Diets</Link>
+            <Link to="/enclosures" style={linkStyle}>Enclosures</Link>
         </nav>
     );
 }
 
 export default Navbar;
+

@@ -7,30 +7,32 @@
 
 // export default App;
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import AnimalList from "./components/AnimalList";
-import KeeperList from "./components/KeeperList";
-import SpeciesList from "./components/SpeciesList";
-import DietList from "./components/DietList";
-import EnclosureList from "./components/EnclosureList";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"; // v5 syntax
+import Navbar from './Navbar';
+import LandingPage from "./LandingPage";
+import AnimalList from "./AnimalList";
+import KeeperList from "./KeeperList";
+import SpeciesList from "./SpeciesList";
+import DietList from "./DietList";
+import EnclosureList from "./EnclosureList";
+
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div className="container" style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<AnimalList />} />
-          <Route path="/keepers" element={<KeeperList />} />
-          <Route path="/species" element={<SpeciesList />} />
-          <Route path="/diets" element={<DietList />} />
-          <Route path="/enclosures" element={<EnclosureList />} />
-        </Routes>
-      </div>
+      <Switch>
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/animals" component={AnimalList} />
+        <Route path="/keepers" component={KeeperList} />
+        <Route path="/species" component={SpeciesList} />
+        <Route path="/diets" component={DietList} />
+        <Route path="/enclosures" component={EnclosureList} />
+      </Switch>
     </Router>
   );
 }
+
 
 export default App;
 

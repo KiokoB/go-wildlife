@@ -14,7 +14,7 @@ function EnclosureList() {
         <div>
             <h2>🏠 Enclosures</h2>
             <table border="1" cellPadding="8" style={{ width: "100%", marginTop: "15px" }}>
-                <thead style={{ backgroundColor: "#bfdbfe" }}>
+                <thead style={{ backgroundColor: "#b6e0c7ff" }}>
                     <tr>
                         <th>ID</th>
                         <th>Type</th>
