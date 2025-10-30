@@ -9,10 +9,10 @@ function AnimalList() {
         name: "",
         gender: "",
         year_of_arrival: "",
-        species: "",
-        diet: "",
-        keeper: "",
-        enclosure: ""
+        species_id: "",
+        diet_id: "",
+        keeper_id: "",
+        enclosure_id: ""
     });
 
     // ✅ Fetch all animals
@@ -74,10 +74,10 @@ function AnimalList() {
                     <input name="name" value={newAnimal.name} onChange={handleChange} placeholder="Name" required />
                     <input name="gender" value={newAnimal.gender} onChange={handleChange} placeholder="Gender" />
                     <input name="year_of_arrival" value={newAnimal.year_of_arrival} onChange={handleChange} placeholder="Year of Arrival" />
-                    <input name="species" value={newAnimal.species} onChange={handleChange} placeholder="Species" />
-                    <input name="diet" value={newAnimal.diet} onChange={handleChange} placeholder="Diet" />
-                    <input name="keeper" value={newAnimal.keeper} onChange={handleChange} placeholder="Keeper" />
-                    <input name="enclosure" value={newAnimal.enclosure} onChange={handleChange} placeholder="Enclosure" />
+                    <input name="species_id" value={newAnimal.species_id} onChange={handleChange} placeholder="Species ID" />
+                    <input name="diet_id" value={newAnimal.diet_id} onChange={handleChange} placeholder="Diet" />
+                    <input name="keeper_id" value={newAnimal.keeper_id} onChange={handleChange} placeholder="Keeper" />
+                    <input name="enclosure_id" value={newAnimal.enclosure_id} onChange={handleChange} placeholder="Enclosure" />
                     <button type="submit" style={{ gridColumn: "span 4", backgroundColor: "#86efac", border: "none", padding: "8px", cursor: "pointer" }}>
                         ➕ Add Animal
                     </button>

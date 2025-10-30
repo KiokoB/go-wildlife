@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Navbar() {
     const navStyle = {
         backgroundColor: "#065f46",
-        padding: "15px",
+        padding: "20px",
         display: "flex",
         justifyContent: "center",
         gap: "30px",
